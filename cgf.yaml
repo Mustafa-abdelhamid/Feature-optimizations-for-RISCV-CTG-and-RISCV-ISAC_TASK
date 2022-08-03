@@ -1,0 +1,17 @@
+# XLEN RELATED CHECKS 
+#for XLEN= 32 ** Check base field = 1 
+misa && 0x40000000 == 0x40000000 
+######################################################### 
+ #Base integer RELATED CHECKS 
+#for integer base  Check bit at index 8  = 1 
+misa && 0x00000100 == 0x00000100 
+#for embedded integer base Check bit at index 4  = 1 
+misa && 0x00000010 == 0x00000010 
+######################################################### 
+ #RATIFIED EXTENSIONS RELATED CHECKS 
+#for M extension  Check bit at index 12  = 1 
+misa && 0x00001000 == 0x00001000 
+#for Q extension  Check bit at index 16  = 1 
+misa && 0x00010000 == 0x00010000 
+#for Q extension  F and D are implied  
+misa && 0x00000028 == 0x00000028 
