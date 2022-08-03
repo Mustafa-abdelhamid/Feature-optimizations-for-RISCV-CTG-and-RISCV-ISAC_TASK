@@ -58,10 +58,10 @@ if __name__ == "__main__":
 		f.write("#for XLEN= 128 **Check base field = 3 \n")
 		f.write("misa && 0xc0000000 == 0xc0000000 \n")
 	f.write("######################################################### \n #Base integer RELATED CHECKS \n")
-	if (supported_isa[0]==['I'] or ['i']): 
+	if (('I' in supported_isa[1::]) or ('i' in supported_isa[1::])): 
 		f.write("#for integer base  Check bit at index 8  = 1 \n")
 		f.write("misa && 0x00000100 == 0x00000100 \n")
-	if (supported_isa[0]==['E'] or ['e']):
+	if (('E' in supported_isa[1::]) or ('e' in supported_isa[1::]) ):
 		f.write("#for embedded integer base Check bit at index 4  = 1 \n")
 		f.write("misa && 0x00000010 == 0x00000010 \n")
 	f.write("######################################################### \n #RATIFIED EXTENSIONS RELATED CHECKS \n")
